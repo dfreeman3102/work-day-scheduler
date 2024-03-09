@@ -8,7 +8,7 @@ and display the local storage upon reloading the page.
 Outside research includes watching Youtube tutorials and looking up questions on stack overflow.
 
 Here is a screenshot of the finished project.
-![alt text](Work-day-scheduler.png)
+![alt text](assets/imgs/Work-day-scheduler.png)
 
 Here is a link to the finished project.
 https://dfreeman3102.github.io/work-day-scheduler/
