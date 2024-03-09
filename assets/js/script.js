@@ -15,9 +15,19 @@ $(function () {
     console.log(timeSelector);
 
     // places items in local storage
-    localStorage.setItem(timeSelector, inputText);
-  })
-  
+    localStorage.setItem(timeSelector, inputText); 
+  }) 
+  // user input saved in localStorage set to the values of the individual textarea elements.
+  $("#hour-9 .description").text(localStorage.getItem("hour-9"));
+  $("#hour-10 .description").text(localStorage.getItem("hour-10"));
+  $("#hour-11 .description").text(localStorage.getItem("hour-11"));
+  $("#hour-12 .description").text(localStorage.getItem("hour-12"));
+  $("#hour-13 .description").text(localStorage.getItem("hour-13"));
+  $("#hour-14 .description").text(localStorage.getItem("hour-14"));
+  $("#hour-15 .description").text(localStorage.getItem("hour-15"));
+  $("#hour-16 .description").text(localStorage.getItem("hour-16"));
+  $("#hour-17 .description").text(localStorage.getItem("hour-17"));
+
   function timeClock() {
     var currentTime = dayjs().hour();
     //for each time block, the id of each div is separated by the "hour-" and the number to
@@ -42,10 +52,7 @@ $(function () {
 
   }
   timeClock();
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
+ 
   //displays the current date and time
   setInterval(function () {
     var today = dayjs();
