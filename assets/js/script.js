@@ -49,12 +49,13 @@ $(document).ready(function () {
       })
 
     }
-    timeClock();
+    
 
     //displays the current date and time
     setInterval(function () {
       var today = dayjs();
       $("#currentDay").text(today.format("MMM D, YYYY, h:mm:ss"));
     }, 1000)
+    timeClock();
   });
 });
