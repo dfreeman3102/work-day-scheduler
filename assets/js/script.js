@@ -9,20 +9,18 @@ $(function () {
     //consoles the input text from the text areas with the class of description
     var inputText = $(this).siblings(".description").val();
     console.log(inputText);
-    
+
     //consoles the id from the original div element containing the hour-x
-    // var timeSelector = $(this).parent().attr("id");
-    // console.log(timeSelector);
+    var timeSelector = $(this).parent().attr("id");
+    console.log(timeSelector);
 
-    //places items in local storage
-    // localStorage.setItem("input", JSON.stringify(inputText));
+    // places items in local storage
+    localStorage.setItem(timeSelector, inputText);
   })
-  //loads saved data from localStorage
-  var input = JSON.parse(localStorage.getItem("input"));
-
+  
   function timeClock() {
     var currentTime = dayjs().hour();
-    //for each time block, the id of each div is separated by the hour- and the number to
+    //for each time block, the id of each div is separated by the "hour-" and the number to
     //allow the comparison to the actual time
     $(".time-block").each(function () {
       var hour = parseInt($(this).attr("id").split("hour-")[1]);
